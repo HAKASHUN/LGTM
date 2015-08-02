@@ -2,6 +2,8 @@
   "name": "LGTM",
   "version": "0.0.0",
   "devDependencies": {
+    "run-sequence": "^1.0.2",
+    "require-dir": "^0.1.0",
     "gulp": "^3.8.7"
   }
 }
