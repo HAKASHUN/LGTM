@@ -9,6 +9,7 @@ gulp.task('build', function(done) {
     'build:js',
     'build:css',
     'build:html',
+    'build:manifest',
     done
   );
 });
@@ -28,3 +29,7 @@ gulp.task('build:css', function() {
     .pipe(gulp.dest(dest + '/css'));
 });
 
+gulp.task('build:manifest', function() {
+  return gulp.src('./src/manifest.json')
+    .pipe(gulp.dest(dest));
+});
