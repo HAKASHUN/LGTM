@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
+var cssnext = require("gulp-cssnext")
 var dest = './dist';
 
 gulp.task('build', function(done) {
@@ -26,6 +27,7 @@ gulp.task('build:js', function() {
 
 gulp.task('build:css', function() {
   return gulp.src('./src/css/**/*.css')
+    .pipe(cssnext())
     .pipe(gulp.dest(dest + '/css'));
 });
 

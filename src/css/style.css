@@ -1,3 +1,10 @@
-body {
+:root {
+  --popupWidth: 340px;
+}
 
+body {
+  width: var(--popupWidth);
+  margin: 0 8px;
+  box-sizing: border-box;
+  font-smoothing: antialiased;
 }
