@@ -1,6 +1,17 @@
 :root {
   --popupWidth: 340px;
+  /**
+   Colors
+   */
+  --black: #000;
+  --white: #fff;
 }
+
+/**
+  https://github.com/suitcss/base
+  http://suitcss.github.io/base/test/
+*/
+@import "suitcss-base";
 
 body {
   width: var(--popupWidth);
@@ -8,3 +19,25 @@ body {
   box-sizing: border-box;
   font-smoothing: antialiased;
 }
+
+
+/**
+ Components
+*/
+
+/** search box */
+.c-search {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box !important;
+}
+
+.c-search:focus {
+  outline: 0;
+  background: var(--white);
+  border-color: #b3b3b3;
+}
+

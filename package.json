@@ -5,6 +5,7 @@
     "run-sequence": "^1.0.2",
     "require-dir": "^0.1.0",
     "gulp": "^3.8.7",
-    "gulp-cssnext": "^1.0.1"
+    "gulp-cssnext": "^1.0.1",
+    "suitcss-base": "^0.8.0"
   }
 }
