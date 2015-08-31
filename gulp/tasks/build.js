@@ -1,8 +1,11 @@
 'use strict';
 
 var gulp = require('gulp');
+var browserify = require('browserify');
+var babelify = require('babelify');
+var source = require('vinyl-source-stream');
 var runSequence = require('run-sequence');
-var cssnext = require("gulp-cssnext")
+var cssnext = require("gulp-cssnext");
 var dest = './dist';
 
 gulp.task('build', function(done) {
@@ -21,8 +24,13 @@ gulp.task('build:html', function() {
 });
 
 gulp.task('build:js', function() {
-  return gulp.src('./src/js/**/*.js')
+  return browserify('src/js/index.js', { debug: true })
+    .transform(babelify)
+    .bundle()
+    .on("error", function (err) { console.log("Error : " + err.message); })
+    .pipe(source('bundle.js'))
     .pipe(gulp.dest(dest + '/js'));
+
 });
 
 gulp.task('build:css', function() {
