@@ -1,8 +1,16 @@
-'use strict';
-
 import React from 'react';
+import { Provider } from 'react-redux';
+import App from './containers/App';
+import configureStore from './store/configureStore';
+
+const store = configureStore();
+
+let rootElement = document.getElementById('root');
 
 React.render(
-  <h1>HelloWorld</h1>,
-  document.getElementById('root')
+  <Provider store={store}>
+    {() => <App />}
+  </Provider>,
+  rootElement
 );
+

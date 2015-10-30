@@ -9,9 +9,15 @@
     "browserify": "^10.2.1",
     "babelify": "^6.1.1",
     "suitcss-base": "^0.8.0",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.4.0",
+    "gulp-util": "^3.0.6"
   },
   "dependencies": {
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "redux": "^3.0.0",
+    "react-redux": "^3.0.0",
+    "isomorphic-fetch": "^2.1.1",
+    "redux-thunk": "^1.0.0"
   }
 }

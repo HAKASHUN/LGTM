@@ -8,6 +8,13 @@
     "default_popup": "popup.html"
   },
   "permissions": [
-    "tabs"
-  ]
+    "storage",
+    "https://api.instagram.com/*",
+    "tabs",
+    "identity"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
 }
